@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/estilos.css}">
+    <title>Buscar Salario</title>
+</head>
+<body>
+<h2>Consultar Salario</h2>
+<form th:action="@{/empresa/calcularSalario}" method="get">
+    <label>DNI:</label>
+    <input type="text" name="dni" required>
+    <button type="submit">Calcular</button>
+</form>
+<br>
+<a th:href="@{/empresa/}">Volver</a>
+</body>
+</html>

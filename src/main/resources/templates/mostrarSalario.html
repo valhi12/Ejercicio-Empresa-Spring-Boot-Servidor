@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>Salario Calculado</title>
+</head>
+<body>
+<h2>Resultado</h2>
+<p>El salario para el DNI <strong th:text="${dniConsultado}"></strong> es:</p>
+<h3 th:text="${salarioCalculado} + ' €'">0 €</h3>
+<br>
+<a th:href="@{/empresa/buscarSalario}">Consultar otro</a>
+<br>
+<a th:href="@{/empresa/}">Volver al Menú</a>
+</body>
+</html>

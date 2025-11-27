@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>Buscar para Modificar</title>
+</head>
+<body>
+<h2>Buscar Empleado</h2>
+<form th:action="@{/empresa/buscarEmpleados}" method="get">
+    <label>Filtro (Nombre):</label>
+    <input type="text" name="filtro" required>
+    <button type="submit">Buscar</button>
+</form>
+<br>
+<a th:href="@{/empresa/}">Volver</a>
+</body>
+</html>

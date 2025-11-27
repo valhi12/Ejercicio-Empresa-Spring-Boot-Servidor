@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>Resultados</title>
+</head>
+<body>
+<h2>Resultados de la Búsqueda</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>DNI</th>
+        <th>Acción</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="emp : ${listaResultados}">
+        <td th:text="${emp.nombre}">Nombre</td>
+        <td th:text="${emp.dni}">DNI</td>
+        <td>
+            <a th:href="@{/empresa/modificarEmpleado(dni=${emp.dni})}">Modificar</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<a th:href="@{/empresa/buscarEmpleado}">Nueva Búsqueda</a>
+</body>
+</html>

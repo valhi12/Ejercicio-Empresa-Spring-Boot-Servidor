@@ -19,6 +19,7 @@ public interface EmpleadoRepository extends JpaRepository<Empleado, String> {
             Integer anyos
     );
 
+
     @Query(value = "SELECT sueldo FROM nomina WHERE Dni = ?1", nativeQuery = true)
-    Double findSalarioByID(String DNi);
+    Double findSalarioByID(String dni);
 }
